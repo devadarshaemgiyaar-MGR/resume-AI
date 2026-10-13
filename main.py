@@ -1,4 +1,11 @@
 from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Resume AI API is running!"}
+from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
 from pathlib import Path
